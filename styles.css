@@ -312,19 +312,22 @@ footer {
     margin-bottom: 1rem;
 }
 
+
+
 /* Contact Section */
 .contact-section {
     padding: 8rem 5%;
 }
 
+
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .contact-info {
+    flex: 1;
     background: #112240;
     padding: 2rem;
     border-radius: 8px;
@@ -368,15 +371,30 @@ footer {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .contact-content {
-        grid-template-columns: 1fr;}
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
 }
+
+
+
+
+
 
 .skills-section {
     animation: fadeIn 1s ease-in;
