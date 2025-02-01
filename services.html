@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="website icon" href="images/icon.png">
-
 </head>
 <body>
     <header>
         <nav>
             <h2 class="logo">Abdulrhman <span>Salama</span></h2>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
@@ -61,4 +60,20 @@
                 <div class="service-card">
                     <i class="fas fa-cogs"></i>
                     <h3>Consulting</h3>
-                    <p>Providing expert advice on AI integration in healthcare.</p
+                    <p>Providing expert advice on AI integration in healthcare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to toggle the navigation menu
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
